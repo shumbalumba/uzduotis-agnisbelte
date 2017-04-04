@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link href='bootstrap.min.css' rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+        <link rel='stylesheet' href='main.css'>
+    </head>
+    
+    <body>
+    <!-- HEADER -->    
+        <header>
+            <div class='menu'>
+                <div class='burger'><div></div><div></div><div></div></div>
+                <ul>
+                    <li class='m'><a href='#' style='text-transform: uppercase;'>dashbord</a></li>
+                    <li class='m'><a href='#' style='text-transform: uppercase;'>conversations</a></li>
+                    <li class='m'><a href='#' style='text-transform: uppercase;'>notifications</a></li>
+                    <li>
+                    <div class='dropdown'>
+                        <div class='acc'>
+                        <span><a href='#'><i class="fa fa-user" aria-hidden="true"></i> Jorah Mormont <i class="fa fa-caret-down" aria-hidden="true"></i></a></span>
+                            <div class='pointer'></div>
+                            <div class='options'>
+                                    <ul>
+                                <li><a href='#'><i class="fa fa-users" aria-hidden="true"></i> Groups </a></li>
+                                <li><a href='#'><i class="fa fa-comments" aria-hidden="true"></i> Frequently contacted</a></li>
+                                <li><a href='#'><i class="fa fa-wrench" aria-hidden="true"></i> Preferences</a></li>
+                                <li><a href='#'><i class="fa fa-power-off" aria-hidden="true"></i> Log Out</a></li>
+                                    </ul>
+                            </div>
+                            </div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class='logo'>
+            <a href='#'><i class="fa fa-book" aria-hidden="true"></i><h1>contactify</h1></a>
+            </div>
+            <div class='background'></div>
+        </header>
+    
+<div class='content'>
+    <!-- INPUTS -->
+        <div class='input-section'>
+            <div class='inputs'>
+                <input type='text' pattern='^[a-zA-Z]+$' name='Name' onkeyup="filtras()" placeholder="Name" class="form-control" id='filter-name' >
+                <select name='City' class="form-control" id='filter-city' >
+                <option value='City' disabled selected>City</option>
+                    <option value='Kaunas'>Kaunas</option>
+                    <option value='Klaipėda'>Klaipėda</option>
+                    <option value='Liepalingis'>Liepalingis</option>
+                    <option value='Tauragė'>Tauragė</option>
+                    <option value='Vilnius'>Vilnius</option>
+                </select>
+                <div class='filter' id='test'><a href='#' style='text-transform: uppercase;' onclick="miestas()"><i class="fa fa-filter" aria-hidden="true"></i>filter</a></div>
+                <div class='new-contact'><a href='#' style='text-transform: uppercase;'><i class="fa fa-plus" aria-hidden="true"></i>add new contact</a><div class='contact-background'></div></div>
+            </div>
+        </div>  
+        
+    <!--TABLES -->
+      <div class='table-container'>  
+        <div class='tables'>
+            <table class='table' id='ajax'>
+                <tr>
+                    <th>Name<i onclick="sortTable()" class="fa fa-arrow-down" aria-hidden="true"></i></th>
+                    <th>Surname</th>
+                    <th>City</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+</div>
+  <!-- Footer -->
+        
+        <div class='footer'>
+            <div class='left'>
+                <ul class='vertical'>
+                    <li><a href='#'>Dashboard</a></li>
+                    <li><a href='#'>Conversations</a></li>
+                    <li><a href='#'>Conversations</a></li>
+                </ul>
+                <ul class='horizontal'>
+                    <li>&copy 2015 Contactify</li>
+                    <li><a href='#'>About</a></li>
+                    <li><a href='#'>Privacy</a></li>
+                </ul>
+            </div>
+            <div class='middle'>
+                <div class='cloud'><i class="fa fa-cloud-upload" aria-hidden="true"></i>Last synced: <br> 2015-06-02 14:33:10 <a href='#'><div class='cloud-btn' style='text-transform: uppercase'>force sync</div></a></div>
+                
+                <div class='help'><i class="fa fa-stethoscope" aria-hidden="true"></i>Help desk and Resolution centre available: <br> I-IV 8:00 - 18:00, V 8:00 - 16:45</div>
+            </div>
+            <div class='right'>
+                <ul class='vertical'>
+                    <li><a href='#'>Groups</a></li>
+                    <li><a href='#'>Frequently contacted</a></li>
+                    <li><a href='#'>Preferences</a></li>
+                    <li><a href='#'>Log out</a></li>
+                </ul>
+            </div>
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+        <script src='scripts/jquery-1.12.4.min.js'></script>
+        <script src='scripts/bootstrap.min.js'></script>
+        <script src='scripts/uzduotis.js'></script>
+    </body>
+</html>
